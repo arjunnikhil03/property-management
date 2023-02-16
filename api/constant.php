@@ -1,0 +1,24 @@
+<?php
+// Project Specific
+
+const INVALID_TOKEN_CODE = 419;
+const VALID_HTTP_CODE = 200;
+const MYSQL_USERNAME = "kalturaNew";
+const MYSQL_PASSWORD = "J!oMedi@Kaltura007";
+const MYSQL_HOSTNAME = "localhost";
+const MYSQL_DBNAME = "hcms";
+
+
+//HTTP Status Code
+const HTTP_NO_CONTENT = 204;
+const HTTP_BAD_REQUEST = 400;
+const HTTP_UNAUTHORIZED = 401;
+const HTTP_FORBIDDEN = 403;
+const HTTP_NOT_FOUND = 404;
+const HTTP_METHOD_NOT_ALLOWED = 405;
+const HTTP_NOT_ACCEPTABLE = 406;
+const HTTP_REQUEST_TIMEOUT = 408;
+const HTTP_INTERNAL_SERVER_ERROR = 500;
+const HTTP_NOT_IMPLEMENTED = 501;
+const HTTP_BAD_GATEWAY = 502;
+const HTTP_TEAPOT = 418;

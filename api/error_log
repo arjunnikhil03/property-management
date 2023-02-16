@@ -1,0 +1,253 @@
+[13-Oct-2020 17:34:36 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/zygv3t9mwlwq/public_html/hcms/models/common.php on line 64
+[13-Oct-2020 17:36:11 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/zygv3t9mwlwq/public_html/hcms/models/common.php on line 68
+[13-Oct-2020 17:40:26 UTC] PHP Fatal error:  Uncaught Firebase\JWT\ExpiredException: Expired token in /home/zygv3t9mwlwq/public_html/hcms/vendor/firebase/php-jwt/src/JWT.php:144
+Stack trace:
+#0 /home/zygv3t9mwlwq/public_html/hcms/models/auth.php(92): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1Q...', '\n-----BEGIN PUB...', Array)
+#1 /home/zygv3t9mwlwq/public_html/hcms/models/common.php(68): validateToken('eyJ0eXAiOiJKV1Q...')
+#2 /home/zygv3t9mwlwq/public_html/hcms/map.php(6): authMiddleware()
+#3 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hcms/vendor/firebase/php-jwt/src/JWT.php on line 144
+[13-Oct-2020 17:43:17 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 95
+[13-Oct-2020 18:06:11 UTC] PHP Notice:  Undefined index: uuid in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 89
+[13-Oct-2020 18:06:11 UTC] PHP Notice:  Undefined index: userid in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 90
+[13-Oct-2020 18:06:11 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'uuid' cannot be null in /home/zygv3t9mwlwq/public_html/hcms/models/base.php:40
+Stack trace:
+#0 /home/zygv3t9mwlwq/public_html/hcms/models/base.php(40): PDOStatement->execute(Array)
+#1 /home/zygv3t9mwlwq/public_html/hcms/models/auth.php(118): dmlFunctions('INSERT INTO ses...', Array)
+#2 /home/zygv3t9mwlwq/public_html/hcms/models/auth.php(91): generateSession(Array)
+#3 /home/zygv3t9mwlwq/public_html/hcms/login.php(8): authLogin(Array)
+#4 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hcms/models/base.php on line 40
+[13-Oct-2020 18:07:19 UTC] PHP Notice:  Undefined index: uuid in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 89
+[13-Oct-2020 18:07:19 UTC] PHP Notice:  Undefined index: userid in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 90
+[13-Oct-2020 18:08:34 UTC] PHP Notice:  Undefined index: userid in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 90
+[13-Oct-2020 18:08:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'userid' cannot be null in /home/zygv3t9mwlwq/public_html/hcms/models/base.php:40
+Stack trace:
+#0 /home/zygv3t9mwlwq/public_html/hcms/models/base.php(40): PDOStatement->execute(Array)
+#1 /home/zygv3t9mwlwq/public_html/hcms/models/auth.php(119): dmlFunctions('INSERT INTO ses...', Array)
+#2 /home/zygv3t9mwlwq/public_html/hcms/models/auth.php(91): generateSession(Array)
+#3 /home/zygv3t9mwlwq/public_html/hcms/login.php(8): authLogin(Array)
+#4 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hcms/models/base.php on line 40
+[13-Oct-2020 18:16:10 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php:113
+Stack trace:
+#0 /home/zygv3t9mwlwq/public_html/hcms/models/auth.php(101): _validateToken('eyJ0eXAiOiJKV1Q...', Object(stdClass))
+#1 /home/zygv3t9mwlwq/public_html/hcms/models/common.php(70): validateToken('eyJ0eXAiOiJKV1Q...')
+#2 /home/zygv3t9mwlwq/public_html/hcms/map.php(6): authMiddleware()
+#3 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 113
+[14-Oct-2020 12:58:18 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'hcms.auth' doesn't exist in /home/zygv3t9mwlwq/public_html/hcms/models/base.php:21
+Stack trace:
+#0 /home/zygv3t9mwlwq/public_html/hcms/models/base.php(21): PDO->prepare('SELECT * from a...')
+#1 /home/zygv3t9mwlwq/public_html/hcms/models/auth.php(58): fetchAssocWithoutCache('SELECT * from a...', Array)
+#2 /home/zygv3t9mwlwq/public_html/hcms/models/auth.php(63): _authLogin(Object(stdClass))
+#3 /home/zygv3t9mwlwq/public_html/hcms/login.php(8): authLogin(Object(stdClass))
+#4 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hcms/models/base.php on line 21
+[14-Oct-2020 12:59:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'datecreation' in 'field list' in /home/zygv3t9mwlwq/public_html/hcms/models/base.php:37
+Stack trace:
+#0 /home/zygv3t9mwlwq/public_html/hcms/models/base.php(37): PDO->prepare('INSERT INTO ses...')
+#1 /home/zygv3t9mwlwq/public_html/hcms/models/auth.php(126): dmlFunctions('INSERT INTO ses...', Array)
+#2 /home/zygv3t9mwlwq/public_html/hcms/models/auth.php(91): generateSession(Array)
+#3 /home/zygv3t9mwlwq/public_html/hcms/login.php(8): authLogin(Array)
+#4 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hcms/models/base.php on line 37
+[14-Oct-2020 15:02:13 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 117
+[14-Oct-2020 15:04:46 UTC] PHP Deprecated:  The behavior of unparenthesized expressions containing both '.' and '+'/'-' will change in PHP 8: '+'/'-' will take a higher precedence in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 118
+[14-Oct-2020 15:04:46 UTC] PHP Warning:  Use of undefined constant exp - assumed 'exp' (this will throw an Error in a future version of PHP) in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 118
+[14-Oct-2020 15:04:46 UTC] PHP Fatal error:  Uncaught Error: Object of class stdClass could not be converted to string in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php:118
+Stack trace:
+#0 /home/zygv3t9mwlwq/public_html/hcms/common.php(69): validateToken('eyJ0eXAiOiJKV1Q...')
+#1 /home/zygv3t9mwlwq/public_html/hcms/map.php(6): authMiddleware()
+#2 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 118
+[14-Oct-2020 15:05:34 UTC] PHP Deprecated:  The behavior of unparenthesized expressions containing both '.' and '+'/'-' will change in PHP 8: '+'/'-' will take a higher precedence in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 118
+[14-Oct-2020 15:05:34 UTC] PHP Warning:  Use of undefined constant exp - assumed 'exp' (this will throw an Error in a future version of PHP) in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 118
+[14-Oct-2020 15:05:34 UTC] PHP Fatal error:  Uncaught Error: Object of class stdClass could not be converted to string in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php:118
+Stack trace:
+#0 /home/zygv3t9mwlwq/public_html/hcms/common.php(69): validateToken('eyJ0eXAiOiJKV1Q...')
+#1 /home/zygv3t9mwlwq/public_html/hcms/map.php(6): authMiddleware()
+#2 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 118
+[14-Oct-2020 15:06:19 UTC] PHP Deprecated:  The behavior of unparenthesized expressions containing both '.' and '+'/'-' will change in PHP 8: '+'/'-' will take a higher precedence in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 118
+[14-Oct-2020 15:06:19 UTC] PHP Notice:  Undefined variable: jwtDat in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 117
+[14-Oct-2020 15:06:37 UTC] PHP Deprecated:  The behavior of unparenthesized expressions containing both '.' and '+'/'-' will change in PHP 8: '+'/'-' will take a higher precedence in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 118
+[14-Oct-2020 15:07:45 UTC] PHP Deprecated:  The behavior of unparenthesized expressions containing both '.' and '+'/'-' will change in PHP 8: '+'/'-' will take a higher precedence in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 117
+[14-Oct-2020 15:07:45 UTC] PHP Warning:  Use of undefined constant exp - assumed 'exp' (this will throw an Error in a future version of PHP) in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 117
+[14-Oct-2020 15:07:45 UTC] PHP Fatal error:  Uncaught Error: Object of class stdClass could not be converted to string in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php:117
+Stack trace:
+#0 /home/zygv3t9mwlwq/public_html/hcms/common.php(69): validateToken('eyJ0eXAiOiJKV1Q...')
+#1 /home/zygv3t9mwlwq/public_html/hcms/map.php(6): authMiddleware()
+#2 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 117
+[14-Oct-2020 15:08:08 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php:117
+Stack trace:
+#0 /home/zygv3t9mwlwq/public_html/hcms/common.php(69): validateToken('eyJ0eXAiOiJKV1Q...')
+#1 /home/zygv3t9mwlwq/public_html/hcms/map.php(6): authMiddleware()
+#2 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 117
+[14-Oct-2020 15:09:00 UTC] PHP Notice:  Undefined property: stdClass::$uuid in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 119
+[14-Oct-2020 15:09:00 UTC] PHP Notice:  Undefined index: uuid in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 85
+[14-Oct-2020 15:09:00 UTC] PHP Notice:  Undefined index: username in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 86
+[14-Oct-2020 15:09:00 UTC] PHP Notice:  Undefined index: uuid in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 93
+[14-Oct-2020 15:09:00 UTC] PHP Notice:  Undefined index: id in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 94
+[14-Oct-2020 15:09:57 UTC] PHP Notice:  Undefined property: stdClass::$uuid in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 120
+[16-Oct-2020 07:00:56 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 144
+[16-Oct-2020 07:01:07 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 144
+[16-Oct-2020 07:01:31 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 143
+[16-Oct-2020 07:02:26 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 144
+[16-Oct-2020 07:04:40 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 145
+[16-Oct-2020 07:05:28 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/zygv3t9mwlwq/public_html/hcms/map.php on line 6
+[16-Oct-2020 07:06:40 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /home/zygv3t9mwlwq/public_html/hcms/map.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hcms/map.php on line 6
+[16-Oct-2020 07:15:41 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 123
+[16-Oct-2020 09:25:44 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 127
+[16-Oct-2020 09:26:43 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 133
+[16-Oct-2020 09:26:51 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 133
+[16-Oct-2020 09:27:40 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function validateToken(), 2 passed in /home/zygv3t9mwlwq/public_html/hcms/common.php on line 70 and exactly 3 expected in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php:108
+Stack trace:
+#0 /home/zygv3t9mwlwq/public_html/hcms/common.php(70): validateToken('eyJ0eXAiOiJKV1Q...', 'category_map_ad...')
+#1 /home/zygv3t9mwlwq/public_html/hcms/map.php(7): authMiddleware('category_map_ad...', 1)
+#2 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 108
+[16-Oct-2020 09:29:17 UTC] PHP Notice:  Undefined index: id in /home/zygv3t9mwlwq/public_html/hcms/models/auth.php on line 136
+[14-Jun-2021 10:27:10 UTC] PHP Warning:  Undefined variable $dg in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/admn.php on line 868
+[14-Jun-2021 10:27:10 UTC] PHP Warning:  Undefined variable $dg in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/admn.php on line 868
+[14-Jun-2021 10:27:10 UTC] PHP Warning:  Undefined variable $dg in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/admn.php on line 868
+[14-Jun-2021 10:27:10 UTC] PHP Warning:  Undefined variable $dg in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/admn.php on line 868
+[14-Jun-2021 10:27:36 UTC] PHP Warning:  Undefined array key "uuid" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 85
+[14-Jun-2021 10:27:36 UTC] PHP Warning:  Undefined array key "username" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 86
+[14-Jun-2021 10:27:36 UTC] PHP Warning:  Undefined array key "uuid" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 93
+[14-Jun-2021 10:27:36 UTC] PHP Warning:  Undefined array key "id" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 94
+[14-Jun-2021 10:27:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'uuid' cannot be null in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/base.php:40
+Stack trace:
+#0 /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/base.php(40): PDOStatement->execute()
+#1 /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php(188): dmlFunctions()
+#2 /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php(95): generateSession()
+#3 /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php(103): _generateToken()
+#4 /home/zygv3t9mwlwq/public_html/hotelmanagement/api/login.php(8): authLogin()
+#5 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/base.php on line 40
+[14-Jun-2021 10:27:42 UTC] PHP Warning:  Undefined array key "uuid" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 85
+[14-Jun-2021 10:27:42 UTC] PHP Warning:  Undefined array key "username" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 86
+[14-Jun-2021 10:27:42 UTC] PHP Warning:  Undefined array key "uuid" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 93
+[14-Jun-2021 10:27:42 UTC] PHP Warning:  Undefined array key "id" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 94
+[14-Jun-2021 10:27:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'uuid' cannot be null in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/base.php:40
+Stack trace:
+#0 /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/base.php(40): PDOStatement->execute()
+#1 /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php(188): dmlFunctions()
+#2 /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php(95): generateSession()
+#3 /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php(103): _generateToken()
+#4 /home/zygv3t9mwlwq/public_html/hotelmanagement/api/login.php(8): authLogin()
+#5 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/base.php on line 40
+[14-Jun-2021 12:01:41 UTC] PHP Warning:  Undefined array key "uuid" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 85
+[14-Jun-2021 12:01:41 UTC] PHP Warning:  Undefined array key "username" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 86
+[14-Jun-2021 12:01:41 UTC] PHP Warning:  Undefined array key "uuid" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 93
+[14-Jun-2021 12:01:41 UTC] PHP Warning:  Undefined array key "id" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 94
+[14-Jun-2021 12:02:28 UTC] PHP Warning:  Undefined array key "uuid" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 85
+[14-Jun-2021 12:02:28 UTC] PHP Warning:  Undefined array key "username" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 86
+[14-Jun-2021 12:02:28 UTC] PHP Warning:  Undefined array key "uuid" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 93
+[14-Jun-2021 12:02:28 UTC] PHP Warning:  Undefined array key "id" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 94
+[14-Jun-2021 12:05:31 UTC] PHP Warning:  Undefined variable $dg in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/admn.php on line 868
+[14-Jun-2021 12:05:31 UTC] PHP Warning:  Undefined variable $dg in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/admn.php on line 868
+[14-Jun-2021 12:05:31 UTC] PHP Warning:  Undefined variable $dg in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/admn.php on line 868
+[14-Jun-2021 12:05:31 UTC] PHP Warning:  Undefined variable $dg in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/admn.php on line 868
+[14-Jun-2021 12:11:30 UTC] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 60
+[14-Jun-2021 12:11:52 UTC] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 60
+[14-Jun-2021 12:12:02 UTC] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 60
+[14-Jun-2021 12:12:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function fetchAssocWithoutCache() in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php:60
+Stack trace:
+#0 /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php(81): _authLogin()
+#1 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 60
+[14-Jun-2021 12:12:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function fetchAssocWithoutCache() in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php:60
+Stack trace:
+#0 /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php(79): _authLogin()
+#1 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 60
+[14-Jun-2021 12:13:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function fetchAssocWithoutCache() in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php:60
+Stack trace:
+#0 /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php(79): _authLogin()
+#1 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 60
+[14-Jun-2021 12:13:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function fetchAssocWithoutCache() in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php:60
+Stack trace:
+#0 /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php(79): _authLogin()
+#1 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 60
+[14-Jun-2021 12:18:26 UTC] PHP Fatal error:  Uncaught Exception: Invalid Username in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php:72
+Stack trace:
+#0 /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php(117): _authLogin()
+#1 /home/zygv3t9mwlwq/public_html/hotelmanagement/api/login.php(8): authLogin()
+#2 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 72
+[14-Jun-2021 12:25:21 UTC] PHP Warning:  Undefined array key "password" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 65
+[14-Jun-2021 12:25:21 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "TEAPOT_ERROR" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/login.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/login.php on line 11
+[14-Jun-2021 12:26:04 UTC] PHP Warning:  Undefined array key "password" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 65
+[14-Jun-2021 12:26:04 UTC] PHP Warning:  Undefined array key "password" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 65
+[14-Jun-2021 12:26:04 UTC] PHP Fatal error:  Uncaught Exception: Invalid Password in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php:122
+Stack trace:
+#0 /home/zygv3t9mwlwq/public_html/hotelmanagement/api/login.php(11): authLogin()
+#1 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 122
+[14-Jun-2021 12:27:00 UTC] PHP Warning:  Undefined array key "password" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 65
+[14-Jun-2021 12:27:00 UTC] PHP Warning:  Undefined array key "password" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 65
+[14-Jun-2021 12:27:00 UTC] PHP Fatal error:  Uncaught Exception: Invalid Password in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php:122
+Stack trace:
+#0 /home/zygv3t9mwlwq/public_html/hotelmanagement/api/login.php(11): authLogin()
+#1 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 122
+[14-Jun-2021 12:27:47 UTC] PHP Warning:  Undefined array key "password" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 65
+[14-Jun-2021 12:27:47 UTC] PHP Warning:  Undefined array key "password" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 65
+[14-Jun-2021 12:27:47 UTC] PHP Fatal error:  Uncaught Exception: Invalid Password in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php:122
+Stack trace:
+#0 /home/zygv3t9mwlwq/public_html/hotelmanagement/api/login.php(12): authLogin()
+#1 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 122
+[14-Jun-2021 12:28:22 UTC] PHP Warning:  Undefined array key "password" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 65
+[14-Jun-2021 12:28:22 UTC] PHP Warning:  Attempt to read property "password" on string in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 58
+[14-Jun-2021 12:28:22 UTC] PHP Warning:  Attempt to read property "username" on string in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 60
+[14-Jun-2021 12:28:22 UTC] PHP Fatal error:  Uncaught Exception: Invalid Username in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php:122
+Stack trace:
+#0 /home/zygv3t9mwlwq/public_html/hotelmanagement/api/login.php(11): authLogin()
+#1 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 122
+[14-Jun-2021 12:29:55 UTC] PHP Parse error:  syntax error, unexpected token "{", expecting ")" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/login.php on line 11
+[14-Jun-2021 12:30:19 UTC] PHP Warning:  Undefined array key "password" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 65
+[14-Jun-2021 12:30:58 UTC] PHP Warning:  Undefined array key "password" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 65
+[14-Jun-2021 12:31:53 UTC] PHP Warning:  Undefined array key "password" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 65
+[14-Jun-2021 12:32:59 UTC] PHP Warning:  Undefined array key "password" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 66
+[14-Jun-2021 12:34:20 UTC] PHP Warning:  Undefined array key "password" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/models/auth.php on line 66
+[14-Jun-2021 17:49:34 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function authMiddleware(), 0 passed in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/validateToken.php on line 7 and exactly 2 expected in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php:71
+Stack trace:
+#0 /home/zygv3t9mwlwq/public_html/hotelmanagement/api/validateToken.php(7): authMiddleware()
+#1 {main}
+  thrown in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php on line 71
+[14-Jun-2021 17:50:12 UTC] PHP Warning:  Undefined variable $data in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php on line 81
+[14-Jun-2021 17:58:49 UTC] PHP Warning:  Undefined variable $data in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php on line 81
+[14-Jun-2021 17:58:50 UTC] PHP Warning:  Undefined variable $data in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php on line 81
+[14-Jun-2021 17:59:20 UTC] PHP Warning:  Undefined variable $data in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php on line 81
+[14-Jun-2021 18:00:12 UTC] PHP Warning:  Undefined variable $data in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php on line 81
+[14-Jun-2021 18:00:26 UTC] PHP Warning:  Undefined variable $data in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php on line 81
+[14-Jun-2021 18:00:57 UTC] PHP Warning:  Undefined variable $data in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php on line 81
+[14-Jun-2021 18:01:25 UTC] PHP Warning:  Undefined variable $data in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php on line 81
+[14-Jun-2021 18:02:05 UTC] PHP Warning:  Undefined variable $data in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php on line 81
+[14-Jun-2021 18:02:06 UTC] PHP Warning:  Undefined variable $data in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php on line 81
+[14-Jun-2021 18:02:29 UTC] PHP Warning:  Undefined variable $data in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php on line 81
+[14-Jun-2021 18:02:30 UTC] PHP Warning:  Undefined variable $data in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php on line 81
+[14-Jun-2021 18:04:55 UTC] PHP Warning:  Undefined variable $data in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php on line 81
+[14-Jun-2021 18:04:59 UTC] PHP Warning:  Undefined variable $data in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php on line 81
+[14-Jun-2021 18:06:53 UTC] PHP Warning:  Undefined variable $data in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php on line 81
+[14-Jun-2021 18:14:35 UTC] PHP Parse error:  syntax error, unexpected token "}" in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php on line 69
+[14-Jun-2021 18:15:17 UTC] PHP Parse error:  Unclosed '{' on line 76 does not match ')' in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php on line 77
+[14-Jun-2021 18:15:28 UTC] PHP Parse error:  Unclosed '{' on line 76 does not match ')' in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php on line 77
+[14-Jun-2021 18:16:51 UTC] PHP Parse error:  Unclosed '{' on line 76 does not match ')' in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php on line 77
+[14-Jun-2021 18:17:41 UTC] PHP Parse error:  Unclosed '{' on line 76 does not match ')' in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php on line 77
+[14-Jun-2021 18:18:50 UTC] PHP Parse error:  Unclosed '{' on line 78 does not match ')' in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php on line 79
+[14-Jun-2021 18:19:41 UTC] PHP Parse error:  Unclosed '{' on line 78 does not match ')' in /home/zygv3t9mwlwq/public_html/hotelmanagement/api/common.php on line 79
